@@ -57,9 +57,9 @@ export default function Marginalia() {
         Skip to content
       </a>
       <SkyCanvas />
-      <PageFigure />
       <PageEmbers />
       <ScrollIndex />
+      <PageFigure />
       <Hero />
       <div id="r-content" />
       <About />

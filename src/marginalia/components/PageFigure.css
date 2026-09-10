@@ -11,6 +11,13 @@
   padding-left: 0;
 }
 
+/* At the midpoint of About, JS sets an exact document `top` value and this
+   switches the figure out of the viewport layer. It now moves with the page. */
+.r-pf--released {
+  position: absolute;
+  bottom: auto;
+}
+
 .r-pf__img {
   height: 100%;
   width: auto;
