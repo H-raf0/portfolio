@@ -12,7 +12,14 @@ export default function Contact({ onSubmit }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (onSubmit) onSubmit(new FormData(e.target));
+    const formData = new FormData(e.target);
+    if (onSubmit) {
+      onSubmit(formData);
+    } else {
+      const subject = encodeURIComponent(`Portfolio enquiry from ${formData.get("name")}`);
+      const body = encodeURIComponent(`Hello Achraf,\n\n${formData.get("message")}\n\nReply to: ${formData.get("email")}`);
+      window.location.href = `mailto:${owner.email}?subject=${subject}&body=${body}`;
+    }
     setSent(true);
   }
 
@@ -50,11 +57,10 @@ export default function Contact({ onSubmit }) {
 
             {sent ? (
               <div className="r-letter__sent" role="status">
-                <h3>Letter sealed.</h3>
+                <h3>Message ready to send.</h3>
                 <p>
-                  Thanks — I'll be in touch shortly. In the meantime,
-                  read the <a href="#writing">marginalia</a> or browse
-                  the <a href="#work">folio</a>.
+                  Your email client should have opened with a prefilled message.
+                  You can also browse the <a href="#work">projects</a>.
                 </p>
               </div>
             ) : (
@@ -67,7 +73,7 @@ export default function Contact({ onSubmit }) {
                     type="text"
                     required
                     autoComplete="name"
-                    placeholder="Lorenzo de' Medici"
+                    placeholder="Your name"
                   />
                 </div>
                 <div className="r-letter__field">
@@ -78,7 +84,7 @@ export default function Contact({ onSubmit }) {
                     type="email"
                     required
                     autoComplete="email"
-                    placeholder="lorenzo@florence.it"
+                    placeholder="you@example.com"
                   />
                 </div>
                 <div className="r-letter__field">
@@ -88,17 +94,16 @@ export default function Contact({ onSubmit }) {
                     name="message"
                     rows={6}
                     required
-                    placeholder="Tell me what you are building, and what you need."
+                    placeholder="Tell me about the opportunity or project."
                   />
                 </div>
                 <div className="r-letter__actions">
                   <button type="submit" className="r-letter__send">
-                    Seal &amp; send
+                    Open email
                     <span aria-hidden="true">↗</span>
                   </button>
                   <p className="r-letter__pact">
-                    No newsletter, no spam, no follow-up sequence. Just a
-                    reply from a human.
+                    This opens your preferred email app; no form data is stored.
                   </p>
                 </div>
               </>

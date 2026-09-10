@@ -1,144 +1,85 @@
-// Single config file — fork the project, edit this, ship your folio.
-// All sections read from here. No hardcoded names elsewhere (data files
-// for lists like works/writings/stack/press live in ./data/*).
-
 export const SITE = {
-  // Browser tab + meta
-  title: "Marginalia — A Modern Renaissance Folio",
+  title: "Achraf El Allali — Software Engineering Student & Developer",
   description:
-    "A working notebook of design + code work. Built with Marginalia, an open-source portfolio template.",
+    "Portfolio of Achraf El Allali, a software engineering student in France building full-stack applications, APIs, and developer-focused systems.",
   themeColor: "#1a1208",
-
-  // Owner identity
   owner: {
-    name: "Your Name",
-    initials: "YN",
-    role: "Design Engineer",
-    location: "Somewhere · Earth",
-    email: "you@example.com",
+    name: "Achraf El Allali",
+    initials: "AE",
+    role: "Software Engineering Student",
+    location: "Clermont-Ferrand · France",
+    email: "achrafelallali123@gmail.com",
   },
-
-  // Hero
   hero: {
     titleLine1: "Building",
-    titleLine2Italic: "Beautifully",
-    folioLabel: "Folio MMXXVI",
-    lede: (
-      <>
-        A folio of work — design engineer shipping across design and code.
-        Six years of small inventions for big problems.
-      </>
-    ),
+    titleLine2Italic: "useful software",
+    folioLabel: "Portfolio · 2026",
+    lede: <>Software engineering student and full-stack developer. I enjoy turning practical problems into reliable, well-crafted web applications.</>,
     nav: [
-      { label: "Work", numeral: "I", href: "#work" },
+      { label: "Projects", numeral: "I", href: "#work" },
       { label: "About", numeral: "II", href: "#about" },
-      { label: "Writing", numeral: "III", href: "#writing" },
-      { label: "Stack", numeral: "IV", href: "#stack" },
-      { label: "Press", numeral: "V", href: "#press" },
+      { label: "Experience", numeral: "III", href: "#experience" },
+      { label: "Skills", numeral: "IV", href: "#stack" },
+      { label: "Education", numeral: "V", href: "#education" },
       { label: "Contact", numeral: "VI", href: "#contact" },
     ],
     topRight: [
-      { kind: "link", label: "Old site", href: "/" },
-      { kind: "cta",  label: "Get in touch", href: "#contact" },
+      { kind: "link", label: "GitHub", href: "https://github.com/H-raf0" },
+      { kind: "cta", label: "Get in touch", href: "#contact" },
     ],
   },
-
-  // Manifesto / About
   about: {
-    numeral: "II",
-    label: "Manifesto",
-    title: (
-      <>
-        Software has lost the smell of <em>oil paint</em>.
-        I am here to put it back.
-      </>
-    ),
+    numeral: "II", label: "About",
+    title: <>Building systems that are <em>clear, useful, and dependable.</em></>,
     body: [
-      "For six years I have shipped at the seam where design meets code — different stacks, same craft.",
-      "I believe small teams build the most interesting software, that taste is a skill, and that the right detail at the right time is worth a hundred meetings.",
-      "This folio is a working notebook. Recent inventions, old experiments, things I am proud of, things I am still figuring out.",
+      "I am an engineering student at ISIMA in Clermont-Ferrand, specialising in software engineering and information systems.",
+      "My work spans the full stack: interfaces that make complex tasks feel straightforward, APIs that hold up in production, and delivery workflows that keep the path from code to deployment tidy.",
+      "I am especially drawn to projects with real constraints—data, devices, performance, or collaboration—where thoughtful engineering makes a visible difference.",
     ],
-    signature: "— Your Name",
-    signatureMeta: "Somewhere · MMXXVI",
+    signature: "— Achraf El Allali", signatureMeta: "Clermont-Ferrand · France",
     stats: [
-      { num: "VI",  label: "Years shipping", note: "design + code" },
-      { num: "III", label: "Continents lived", note: "edit me" },
-      { num: "XL+", label: "Projects shipped", note: "edit me" },
-      { num: "I",   label: "Craft", note: "design engineering" },
+      { num: "3", label: "Languages", note: "French · English · Arabic" },
+      { num: "2", label: "CTCPA roles", note: "full-stack development" },
+      { num: "4", label: "Core layers", note: "UI · API · data · delivery" },
+      { num: "1", label: "Focus", note: "software engineering" },
     ],
   },
-
-  // Section copy (titles + ledes — items live in ./data/*)
   work: {
-    numeral: "III",
-    label: "Selected Work",
-    title: (
-      <>
-        A folio of <em>small inventions</em>
-      </>
-    ),
-    lede: "Six years of products shipped across health, fintech, government, and indie tooling. Each one a frame in the gallery.",
+    numeral: "I", label: "Selected Projects",
+    title: <>Things I have <em>built and explored</em></>,
+    lede: "A selection of full-stack, backend, and architecture work from coursework and personal projects.",
   },
   writing: {
-    numeral: "IV",
-    label: "Writing",
-    title: (
-      <>
-        From the <em>marginalia</em>
-      </>
-    ),
-    lede: "Notes from the workshop — essays on craft, shipping, and the small interfaces between design and code.",
-    archiveHref: "#",
+    numeral: "III", label: "Experience",
+    title: <>Learning by <em>shipping</em></>,
+    lede: "Hands-on full-stack experience on an IoT platform, from product features to delivery infrastructure.",
+    archiveHref: "https://www.linkedin.com/in/achraf-el-allali",
   },
   stack: {
-    numeral: "V",
-    label: "Workshop",
-    title: (
-      <>
-        The <em>workbench</em>
-      </>
-    ),
-    lede: "A working ledger of the tools I reach for daily. Updated when something earns its place.",
-    countLabel: "tools on the bench",
-    countMeta: "last updated · MMXXVI",
+    numeral: "IV", label: "Skills & Technologies",
+    title: <>The <em>engineering toolkit</em></>,
+    lede: "Technologies I have used across projects, coursework, and professional development work.",
+    countLabel: "technologies in my toolkit", countMeta: "actively learning and refining",
   },
   press: {
-    numeral: "VI",
-    label: "Press",
-    title: (
-      <>
-        In <em>print</em> &amp; on the wire
-      </>
-    ),
-    lede: "Press kit, talks, mentions. Use the bio that fits the column.",
+    numeral: "V", label: "Education",
+    title: <>Foundations for <em>building well</em></>,
+    lede: "Academic training in computer science, software architecture, and practical engineering.",
   },
   contact: {
-    numeral: "VII",
-    label: "Contact",
-    title: (
-      <>
-        Send word — I keep a <em>short reply</em> queue
-      </>
-    ),
-    lede: "Project? Talk? Idea worth chasing? Drop a note. I read every message and reply within a few days.",
-    workingHours: "Mon — Fri · 09:00–18:00 local",
-    workingHoursNote: "Async-first. Don't wait for office hours to write.",
+    numeral: "VI", label: "Contact",
+    title: <>Let’s build something <em>useful</em></>,
+    lede: "I am looking for a software-development internship from March 2027. Feel free to reach out about an opportunity, a project, or a technical conversation.",
+    workingHours: "Based in France · open to opportunities",
+    workingHoursNote: "The form opens your email client with a prefilled message.",
   },
-
-  // Footer
   footer: {
-    line: "Made by hand. A modern Renaissance folio.",
-    typeCredit: <em>Instrument Serif</em>,
-    techCredit: "Built with React, framer-motion, and Lenis.",
+    line: "Designed and developed by Achraf El Allali.", typeCredit: <em>Instrument Serif</em>,
+    techCredit: "Built with React, Vite, framer-motion, and Lenis.",
     links: [
-      { label: "Github",  href: "https://github.com/uxderrick/marginalia" },
-      { label: "License", href: "https://github.com/uxderrick/marginalia/blob/main/LICENSE" },
+      { label: "GitHub", href: "https://github.com/H-raf0" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/achraf-el-allali" },
     ],
   },
-
-  // Asset paths — drop your own bg + figure here, keep filenames or update
-  assets: {
-    bg:     "/assets/marginalia/bg-01-dawn.png",
-    figure: "/assets/marginalia/figure-01-standing.png",
-  },
+  assets: { bg: "/assets/marginalia/bg-01-dawn.png", figure: "/assets/marginalia/figure-01-standing.png" },
 };

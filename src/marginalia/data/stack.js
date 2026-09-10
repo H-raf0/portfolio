@@ -1,42 +1,6 @@
-// Edit this list — your tools, grouped by category.
 export const STACK = [
-  {
-    category: "Design",
-    items: [
-      { name: "Figma", note: "the canvas; design systems, prototypes" },
-      { name: "Linear", note: "specs, decisions, the source of truth" },
-      { name: "Loom", note: "async reviews, walkthroughs" },
-      { name: "Rive", note: "interactive motion, microinteractions" },
-    ],
-  },
-  {
-    category: "Code",
-    items: [
-      { name: "TypeScript", note: "default for everything new" },
-      { name: "React + Vite", note: "fast SPAs, dashboards" },
-      { name: "Next.js", note: "marketing, content, SEO surfaces" },
-      { name: "Swift / SwiftUI", note: "indie macOS + iOS apps" },
-      { name: "Tailwind CSS", note: "design-token plumbing" },
-    ],
-  },
-  {
-    category: "Backend & AI",
-    items: [
-      { name: "Sanity", note: "headless CMS for editorial work" },
-      { name: "Firebase", note: "quick auth + realtime data" },
-      { name: "Postgres + Drizzle", note: "for things that need rigor" },
-      { name: "Anthropic SDK", note: "agentic tools, drafting helpers" },
-      { name: "Vercel", note: "ship fast, ship often" },
-    ],
-  },
-  {
-    category: "Workshop",
-    items: [
-      { name: "Claude Code", note: "pair programming, refactors, scaffolds" },
-      { name: "Cursor", note: "long-form coding sessions" },
-      { name: "Raycast", note: "command center; custom scripts" },
-      { name: "iA Writer", note: "drafting essays, talks" },
-      { name: "Soulver", note: "back-of-envelope numbers" },
-    ],
-  },
+  { category: "Languages", items: [{ name: "C#", note: "APIs and backend services" }, { name: "Java", note: "Spring and software architecture" }, { name: "Python", note: "AI services and backend utilities" }, { name: "C / C++", note: "systems and academic projects" }, { name: "TypeScript", note: "typed frontend development" }] },
+  { category: "Frontend", items: [{ name: "Svelte 5", note: "modern, reactive web interfaces" }, { name: "Angular", note: "structured single-page applications" }, { name: "HTML / CSS", note: "semantic, responsive interfaces" }, { name: "Tailwind CSS", note: "fast, consistent UI implementation" }] },
+  { category: "Backend & Data", items: [{ name: ".NET", note: "REST APIs and application services" }, { name: "FastAPI", note: "Python API development" }, { name: "Spring Boot", note: "Java web services" }, { name: "PostgreSQL", note: "relational application data" }, { name: "SQLite / MySQL", note: "lightweight and relational storage" }] },
+  { category: "Delivery", items: [{ name: "Docker", note: "reproducible local and staging environments" }, { name: "Kubernetes", note: "container orchestration foundations" }, { name: "CI/CD", note: "automated quality and deployment workflows" }, { name: "Git", note: "collaborative source control" }, { name: "Linux", note: "development and deployment environment" }] },
 ];

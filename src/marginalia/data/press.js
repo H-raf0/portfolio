@@ -1,42 +1,13 @@
-// Edit these — press kit assets, mentions, headline facts.
-
 export const PRESS_MENTIONS = [
-  {
-    id: "venue-1",
-    venue: "Publication name",
-    title: "Article title that mentions you",
-    date: "2026-04",
-    href: "#",
-  },
-  {
-    id: "venue-2",
-    venue: "Podcast",
-    title: "Guest appearance · Episode 12",
-    date: "2026-01",
-    href: "#",
-  },
-  {
-    id: "venue-3",
-    venue: "Conference",
-    title: "Talk title · 25 min",
-    date: "2025-09",
-    href: "#",
-  },
+  { id: "isima", venue: "ISIMA", title: "Engineering degree in Computer Science · Software Engineering & Information Systems", date: "2024-09", href: "https://www.isima.fr/" },
+  { id: "uca", venue: "Université Clermont Auvergne", title: "Bachelor’s degree in Computer Science", date: "2022-09", href: "https://www.uca.fr/" },
+  { id: "angular-course", venue: "Udemy", title: "Angular – The Complete Guide", date: "2026", href: "https://www.udemy.com/course/the-complete-guide-to-angular-2/" },
 ];
-
 export const PRESS_DOWNLOADS = [
-  { id: "press-kit",  label: "Full press kit", note: "PDF · 4.2MB",     href: "#" },
-  { id: "headshots",  label: "Headshots",      note: "ZIP · 6 photos",  href: "#" },
-  { id: "logos",      label: "Logos & marks",  note: "SVG + PNG",       href: "#" },
-  { id: "bio-short",  label: "Bio (short)",    note: "TXT · 95 words",  href: "#" },
-  { id: "bio-medium", label: "Bio (medium)",   note: "TXT · 320 words", href: "#" },
-  { id: "bio-long",   label: "Bio (long)",     note: "TXT · 950 words", href: "#" },
+  { id: "github", label: "GitHub profile", note: "Projects & source code", href: "https://github.com/H-raf0" },
+  { id: "linkedin", label: "LinkedIn profile", note: "Experience & contact", href: "https://www.linkedin.com/in/achraf-el-allali" },
+  { id: "email", label: "Email Achraf", note: "Open a conversation", href: "mailto:achrafelallali123@gmail.com" },
 ];
-
 export const PRESS_FACTS = [
-  { k: "Based",      v: "Your city · country" },
-  { k: "Currently",  v: "Your role at Your Place" },
-  { k: "Followers",  v: "edit me" },
-  { k: "OSS stars",  v: "edit me" },
-  { k: "Speaking",   v: "Available · select events" },
+  { k: "Based", v: "Clermont-Ferrand, France" }, { k: "Studying", v: "Software engineering at ISIMA" }, { k: "Seeking", v: "Internship from March 2027" }, { k: "Languages", v: "French · English · Arabic" }, { k: "Interests", v: "Chess · sport · reading" },
 ];

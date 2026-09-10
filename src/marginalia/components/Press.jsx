@@ -17,7 +17,7 @@ export default function Press() {
   const { press } = SITE;
 
   return (
-    <section id="press" className="r-press" aria-label="Press">
+    <section id="education" className="r-press" aria-label="Education">
       <div className="r-press__container">
         <ChapterHeader
           align="left"
@@ -46,7 +46,7 @@ export default function Press() {
 
           {/* Downloads */}
           <div className="r-press__downloads">
-            <h3 className="r-press__sub">Downloads</h3>
+            <h3 className="r-press__sub">Find me online</h3>
             <ul className="r-press__dl-list">
               {PRESS_DOWNLOADS.map((d, i) => (
                 <motion.li
@@ -73,7 +73,7 @@ export default function Press() {
 
           {/* Mentions */}
           <div className="r-press__mentions">
-            <h3 className="r-press__sub">Mentions &amp; talks</h3>
+            <h3 className="r-press__sub">Education &amp; training</h3>
             <ul className="r-press__mentions-list">
               {PRESS_MENTIONS.map((m, i) => (
                 <motion.li

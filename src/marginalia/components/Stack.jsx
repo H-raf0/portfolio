@@ -25,7 +25,7 @@ export default function Stack() {
         <div className="r-stack__ledger">
           <div className="r-stack__ledger-head" aria-hidden="true">
             <span>Category</span>
-            <span>Tool</span>
+            <span>Technology</span>
             <span>Note</span>
           </div>
 

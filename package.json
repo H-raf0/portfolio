@@ -1,28 +1,27 @@
 {
-  "name": "marginalia",
+  "name": "achraf-el-allali-portfolio",
   "version": "0.1.0",
   "private": false,
-  "description": "A modern Renaissance portfolio template — single oil-painting world that color-grades through the day as you scroll. React + Vite + framer-motion + Lenis.",
+  "description": "Personal portfolio for Achraf El Allali, software engineering student and full-stack developer.",
   "keywords": [
     "portfolio",
-    "template",
     "react",
     "vite",
     "framer-motion",
     "lenis",
     "renaissance",
     "scroll-driven",
-    "design-engineering"
+    "software-engineering"
   ],
-  "author": "Derrick Tsorme <tsormed@gmail.com>",
+  "author": "Achraf El Allali",
   "license": "MIT",
-  "homepage": "https://github.com/uxderrick/marginalia",
+  "homepage": "https://github.com/H-raf0/portfolio",
   "repository": {
     "type": "git",
-    "url": "https://github.com/uxderrick/marginalia.git"
+    "url": "https://github.com/H-raf0/portfolio.git"
   },
   "bugs": {
-    "url": "https://github.com/uxderrick/marginalia/issues"
+    "url": "https://github.com/H-raf0/portfolio/issues"
   },
   "type": "module",
   "scripts": {

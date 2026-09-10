@@ -16,7 +16,7 @@ export default function Writing() {
   const { writing } = SITE;
 
   return (
-    <section id="writing" className="r-writing" aria-label="Writing">
+    <section id="experience" className="r-writing" aria-label="Professional experience">
       <div className="r-writing__container">
         <div className="r-writing__header">
           <ChapterHeader
@@ -52,7 +52,6 @@ export default function Writing() {
                     <span aria-hidden="true">·</span>
                     <span>{w.venue}</span>
                     <span aria-hidden="true">·</span>
-                    <span>{w.minutes} min read</span>
                   </p>
                 </div>
                 <span className="r-writing__arrow" aria-hidden="true">→</span>
@@ -63,7 +62,7 @@ export default function Writing() {
 
         <footer className="r-writing__footer">
           <a href={writing.archiveHref} className="r-writing__more">
-            Read the full archive
+            View full profile
             <span aria-hidden="true">↗</span>
           </a>
         </footer>

@@ -1,50 +1,6 @@
-// Edit this list — your selected work.
-// Drop a thumbnail at /public/assets/marginalia/works/<id>.jpg
-// and set `thumb: "/assets/marginalia/works/foo.jpg"` to fill the frame.
-
 export const WORKS = [
-  {
-    id: "studio",
-    numeral: "I",
-    title: "Studio Project",
-    role: "Lead Designer",
-    year: "2025 — present",
-    blurb: "A flagship product you led from zero to one.",
-    tags: ["Product", "Design Systems", "0→1"],
-    thumb: null,
-    href: "#",
-  },
-  {
-    id: "tool",
-    numeral: "II",
-    title: "Indie Tool",
-    role: "Solo · OSS",
-    year: "2024",
-    blurb: "An open-source tool you ship and maintain.",
-    tags: ["OSS", "Indie", "CLI"],
-    thumb: null,
-    href: "#",
-  },
-  {
-    id: "platform",
-    numeral: "III",
-    title: "Platform Migration",
-    role: "Founding Designer",
-    year: "2024",
-    blurb: "A platform-scale rebuild, told as a case study.",
-    tags: ["B2B", "Platform", "Migration"],
-    thumb: null,
-    href: "#",
-  },
-  {
-    id: "experiment",
-    numeral: "IV",
-    title: "Lab Experiment",
-    role: "Solo",
-    year: "2023",
-    blurb: "A weekend experiment that became something more.",
-    tags: ["AI", "Lab", "Prototype"],
-    thumb: null,
-    href: "#",
-  },
+  { id: "ocula", numeral: "I", title: "OCULA", role: "Full-stack team project", year: "2026", blurb: "A video-analysis application that combines uploads, transcription, retrieval-augmented generation, and chat to help people explore video content.", tags: ["Angular", "Spring Boot", "Python", "Docker"], thumb: null, href: "https://github.com/H-raf0/ocula" },
+  { id: "recipe-architecture", numeral: "II", title: "Recipe Service Architecture", role: "Software architecture project", year: "2026", blurb: "A recipe-management REST service designed around CQRS, Kafka events, resilience patterns, and documented architectural decisions.", tags: ["Java", "Spring Boot", "Kafka", "Docker"], thumb: null, href: "https://github.com/H-raf0/architecture_logicielle_qualite" },
+  { id: "incremental-game", numeral: "III", title: "Incremental Game API", role: "Backend team project", year: "2026", blurb: "An ASP.NET Core backend for persistent incremental gameplay, with REST APIs, JWT authentication, SQLite, real-time events, and tests.", tags: ["C#", ".NET", "SQLite", "SignalR"], thumb: null, href: "https://github.com/H-raf0/Incremental_Game" },
+  { id: "trading-platform", numeral: "IV", title: "Trading Platform", role: "Full-stack personal project", year: "2025", blurb: "An in-progress trading simulation built as a separate Angular client and .NET backend—an ongoing exercise in product flows and API design.", tags: ["Angular", "TypeScript", "C#", ".NET"], thumb: null, href: "https://github.com/H-raf0/trading_platform_front_angular" },
 ];
