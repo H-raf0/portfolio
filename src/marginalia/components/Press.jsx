@@ -60,7 +60,7 @@ export default function Press() {
                     ease: [0.22, 1, 0.36, 1],
                   }}
                 >
-                  <a className="r-press__dl" href={d.href}>
+                  <a className="r-press__dl" href={d.href} download={d.download || undefined}>
                     <span className="r-press__dl-label">{d.label}</span>
                     <span className="r-press__dl-rule" aria-hidden="true" />
                     <span className="r-press__dl-note">{d.note}</span>
