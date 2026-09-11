@@ -43,6 +43,7 @@ export default function Hero() {
               key={item.label}
               className={item.kind === "cta" ? "r-hero__nav-cta" : "r-hero__nav-link"}
               href={item.href}
+              download={item.download || undefined}
             >
               {item.label}
             </a>

@@ -4,6 +4,7 @@ export const PRESS_MENTIONS = [
   { id: "angular-course", venue: "Udemy", title: "Angular – The Complete Guide", date: "2026", href: "https://www.udemy.com/course/the-complete-guide-to-angular-2/" },
 ];
 export const PRESS_DOWNLOADS = [
+  { id: "cv", label: "Download CV", note: "PDF · 240 KB", href: "/assets/marginalia/CV_Achraf_EL_ALLALI_Dev_Stage.pdf", download: true },
   { id: "github", label: "GitHub profile", note: "Projects & source code", href: "https://github.com/H-raf0" },
   { id: "linkedin", label: "LinkedIn profile", note: "Experience & contact", href: "https://www.linkedin.com/in/achraf-el-allali" },
   { id: "email", label: "Email Achraf", note: "Open a conversation", href: "mailto:achrafelallali123@gmail.com" },

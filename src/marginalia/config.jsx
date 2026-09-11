@@ -24,7 +24,7 @@ export const SITE = {
       { label: "Contact", numeral: "VI", href: "#contact" },
     ],
     topRight: [
-      { kind: "link", label: "GitHub", href: "https://github.com/H-raf0" },
+      { kind: "link", label: "Download CV", href: "/assets/marginalia/CV_Achraf_EL_ALLALI_Dev_Stage.pdf", download: true },
       { kind: "cta", label: "Get in touch", href: "#contact" },
     ],
   },
