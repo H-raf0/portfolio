@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { SITE } from "../config.jsx";
 import "./ScrollIndex.css";
 
 const SECTIONS = [
-  { id: "hero", numeral: "I", label: "Hero" },
-  { id: "about", numeral: "II", label: "Manifesto" },
-  { id: "work", numeral: "III", label: "Work" },
-  { id: "writing", numeral: "IV", label: "Writing" },
-  { id: "stack", numeral: "V", label: "Workshop" },
-  { id: "press", numeral: "VI", label: "Press" },
-  { id: "contact", numeral: "VII", label: "Contact" },
+  { id: "hero", numeral: "", label: "Home" },
+  { id: "work", numeral: SITE.work.numeral, label: "Projects" },
+  { id: "about", numeral: SITE.about.numeral, label: SITE.about.label },
+  { id: "experience", numeral: SITE.writing.numeral, label: SITE.writing.label },
+  { id: "stack", numeral: SITE.stack.numeral, label: "Skills" },
+  { id: "education", numeral: SITE.press.numeral, label: SITE.press.label },
+  { id: "contact", numeral: SITE.contact.numeral, label: SITE.contact.label },
 ];
 
 export default function ScrollIndex() {
@@ -29,11 +30,10 @@ export default function ScrollIndex() {
       });
 
       const trigger = window.innerHeight * 0.4;
-      let current = SECTIONS[0].id;
-      for (const t of targets) {
-        if (t.top <= trigger) current = t.id;
-      }
-      setActive(current);
+      const current = targets
+        .filter((target) => target.top <= trigger)
+        .sort((a, b) => b.top - a.top)[0];
+      setActive(current?.id || SECTIONS[0].id);
     };
 
     handleScroll();
