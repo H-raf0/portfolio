@@ -86,6 +86,7 @@ const FR_SITE = {
 };
 
 const FR_WORKS = {
+  portfolio: { title: "Portfolio personnel", role: "Projet frontend", blurb: "Un portfolio bilingue à l’identité visuelle inspirée de la peinture, avec des scènes animées au défilement, des projets encadrés et des interactions accessibles. Réalisé avec React et Vite, avec sélection EN/FR persistante et déploiement statique." },
   ocula: { role: "Projet full-stack en équipe", blurb: "Une application d’analyse vidéo pour importer des séquences, générer des transcriptions et explorer leur contenu grâce à des résumés et des questions assistés par IA." },
   "incremental-game": { title: "API de jeu incrémental", role: "Projet backend en équipe", blurb: "Un backend persistant en ASP.NET Core pour un jeu incrémental : progression, améliorations, succès, authentification, événements en temps réel et tests." },
   "labyrinth-2d": { role: "Projet de développement de jeu", blurb: "Un jeu d’évasion dans un labyrinthe 2D procédural avec SDL2, des ennemis intelligents aux comportements multiples et une recherche de chemin par BFS, Dijkstra et A*." },
