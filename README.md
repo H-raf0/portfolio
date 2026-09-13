@@ -29,12 +29,17 @@ The production files are generated in `dist/` and can be deployed to any static 
 
 ## Main content locations
 
+See [the image and EN/FR guide](docs/portfolio-updates.md) for exact image paths,
+recommended dimensions, source credits, language behavior, and related design changes.
+
 - `src/marginalia/config.jsx` — identity, section copy, and metadata
 - `src/marginalia/data/works.js` — featured projects
 - `src/marginalia/data/writings.js` — professional experience
 - `src/marginalia/data/stack.js` — skills and technologies
 - `src/marginalia/data/press.js` — education, training, and profile links
 - `src/marginalia/data/socials.js` — contact and social links
+- `src/marginalia/i18n/content.jsx` — French translations and shared EN/FR interface text
+- `public/assets/marginalia/projects/` — six optimized project images
 
 ## Contact
 

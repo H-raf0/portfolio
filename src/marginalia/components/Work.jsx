@@ -1,15 +1,16 @@
+import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import ChapterHeader from "./ChapterHeader";
-import { SITE } from "../config.jsx";
-import { WORKS } from "../data/works";
+import { useLanguage } from "../i18n/context";
 import "./Work.css";
 
 export default function Work() {
+  const { site: SITE, works } = useLanguage();
   const reduce = useReducedMotion();
   const { work } = SITE;
 
   return (
-    <section id="work" className="r-work" aria-label="Selected work">
+    <section id="work" className="r-work" aria-label={work.label}>
       <div className="r-work__container">
         <div className="r-work__header">
           <ChapterHeader
@@ -22,7 +23,7 @@ export default function Work() {
         </div>
 
         <ul className="r-work__grid">
-          {WORKS.map((w, i) => (
+          {works.map((w, i) => (
             <WorkCard key={w.id} work={w} index={i} reduce={reduce} />
           ))}
         </ul>
@@ -32,6 +33,7 @@ export default function Work() {
 }
 
 function WorkCard({ work, index, reduce }) {
+  const { ui } = useLanguage();
   return (
     <motion.li
       className="r-work__item"
@@ -44,17 +46,11 @@ function WorkCard({ work, index, reduce }) {
         ease: [0.22, 1, 0.36, 1],
       }}
     >
-      <a href={work.href} className="r-work__frame" aria-label={`View ${work.title}`}>
+      <a href={work.href} className="r-work__frame" aria-label={`${ui.viewProject} ${work.title}`}>
         <div className="r-work__frame-outer">
           <div className="r-work__frame-inner">
             <div className="r-work__canvas">
-              {work.thumb ? (
-                <img src={work.thumb} alt="" />
-              ) : (
-                <div className="r-work__canvas-placeholder" aria-hidden="true">
-                  <span className="r-work__canvas-numeral">{work.numeral}</span>
-                </div>
-              )}
+              <ProjectImage key={work.thumb || "fallback"} work={work} />
             </div>
           </div>
           <span className="r-work__plaque" aria-hidden="true">
@@ -79,5 +75,32 @@ function WorkCard({ work, index, reduce }) {
         </ul>
       </div>
     </motion.li>
+  );
+}
+
+function ProjectImage({ work }) {
+  const [status, setStatus] = useState("loading");
+  return (
+    <>
+      {status !== "loaded" && (
+        <div className="r-work__canvas-placeholder" aria-hidden="true">
+          <span className="r-work__canvas-numeral">{work.numeral}</span>
+        </div>
+      )}
+      {work.thumb && status !== "error" && (
+        <img
+          src={work.thumb}
+          alt={work.imageAlt}
+          width={work.imageWidth || 1600}
+          height={work.imageHeight || 1200}
+          loading="lazy"
+          decoding="async"
+          className={status === "loaded" ? "is-loaded" : ""}
+          style={{ objectFit: work.imageFit || "cover", objectPosition: work.imagePosition || "center" }}
+          onLoad={() => setStatus("loaded")}
+          onError={() => setStatus("error")}
+        />
+      )}
+    </>
   );
 }

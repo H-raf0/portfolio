@@ -4,9 +4,10 @@
   bottom: 0;
   height: 100vh;
   width: auto;
+  max-width: 100%;
   z-index: 3;
   pointer-events: none;
-  overflow: visible;
+  overflow: clip;
   /* Pull figure slightly off the left edge so it always feels grounded */
   padding-left: 0;
 }

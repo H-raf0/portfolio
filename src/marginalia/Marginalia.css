@@ -16,6 +16,37 @@
   top: 1rem;
 }
 
+.r-root :is(a, button, input, textarea):focus-visible {
+  outline: 2px solid var(--r-chartreuse);
+  outline-offset: 5px;
+}
+
+.r-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+.r-icon { display: inline-block; flex-shrink: 0; vertical-align: middle; }
+
+@media (prefers-reduced-motion: reduce) {
+  .r-root *, .r-root *::before, .r-root *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  .r-root .r-work__frame:is(:hover, :focus-visible) .r-work__frame-outer,
+  .r-root .r-work__frame:is(:hover, :focus-visible) .r-work__canvas img,
+  .r-root .r-hero__cv:is(:hover, :focus-visible),
+  .r-root .r-hero__cv:is(:hover, :focus-visible) .r-icon__download-arrow,
+  .r-root .r-writing__more:is(:hover, :focus-visible) .r-icon { transform: none; }
+}
+
 .r-placeholder {
   min-height: 60vh;
   display: grid;

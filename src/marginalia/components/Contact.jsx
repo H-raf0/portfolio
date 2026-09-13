@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import ChapterHeader from "./ChapterHeader";
-import { SITE } from "../config.jsx";
+import { useLanguage } from "../i18n/context";
 import { SOCIALS } from "../data/socials";
 import "./Contact.css";
 
 export default function Contact({ onSubmit }) {
+  const { site: SITE, ui } = useLanguage();
   const reduce = useReducedMotion();
   const [sent, setSent] = useState(false);
   const { contact, owner, hero } = SITE;
@@ -16,8 +17,8 @@ export default function Contact({ onSubmit }) {
     if (onSubmit) {
       onSubmit(formData);
     } else {
-      const subject = encodeURIComponent(`Portfolio enquiry from ${formData.get("name")}`);
-      const body = encodeURIComponent(`Hello Achraf,\n\n${formData.get("message")}\n\nReply to: ${formData.get("email")}`);
+      const subject = encodeURIComponent(`${ui.emailSubject} ${formData.get("name")}`);
+      const body = encodeURIComponent(`${ui.emailGreeting}\n\n${formData.get("message")}\n\n${ui.emailReply} ${formData.get("email")}`);
       window.location.href = `mailto:${owner.email}?subject=${subject}&body=${body}`;
     }
     setSent(true);
@@ -57,53 +58,52 @@ export default function Contact({ onSubmit }) {
 
             {sent ? (
               <div className="r-letter__sent" role="status">
-                <h3>Message ready to send.</h3>
+                <h3>{ui.messageReady}</h3>
                 <p>
-                  Your email client should have opened with a prefilled message.
-                  You can also browse the <a href="#work">projects</a>.
+                  {ui.messageReadyBody} <a href="#work">{ui.projects}</a>.
                 </p>
               </div>
             ) : (
               <>
                 <div className="r-letter__field">
-                  <label htmlFor="r-name">Your name</label>
+                  <label htmlFor="r-name">{ui.name}</label>
                   <input
                     id="r-name"
                     name="name"
                     type="text"
                     required
                     autoComplete="name"
-                    placeholder="Your name"
+                    placeholder={ui.name}
                   />
                 </div>
                 <div className="r-letter__field">
-                  <label htmlFor="r-email">Reply address</label>
+                  <label htmlFor="r-email">{ui.replyAddress}</label>
                   <input
                     id="r-email"
                     name="email"
                     type="email"
                     required
                     autoComplete="email"
-                    placeholder="you@example.com"
+                    placeholder={ui.emailPlaceholder}
                   />
                 </div>
                 <div className="r-letter__field">
-                  <label htmlFor="r-msg">Letter</label>
+                  <label htmlFor="r-msg">{ui.letter}</label>
                   <textarea
                     id="r-msg"
                     name="message"
                     rows={6}
                     required
-                    placeholder="Tell me about the opportunity or project."
+                    placeholder={ui.messagePlaceholder}
                   />
                 </div>
                 <div className="r-letter__actions">
                   <button type="submit" className="r-letter__send">
-                    Open email
+                    {ui.openEmail}
                     <span aria-hidden="true">↗</span>
                   </button>
                   <p className="r-letter__pact">
-                    This opens your preferred email app; no form data is stored.
+                    {ui.privacy}
                   </p>
                 </div>
               </>
@@ -112,12 +112,12 @@ export default function Contact({ onSubmit }) {
 
           {/* Socials column */}
           <aside className="r-contact__aside">
-            <h3 className="r-contact__sub">Or find me at</h3>
+            <h3 className="r-contact__sub">{ui.findMe}</h3>
             <ul className="r-contact__socials">
               {SOCIALS.map((s) => (
                 <li key={s.id}>
                   <a href={s.href} className="r-contact__social">
-                    <span className="r-contact__social-key">{s.id}</span>
+                    <span className="r-contact__social-key">{s.id === "email" ? ui.email : s.id}</span>
                     <span className="r-contact__social-rule" aria-hidden="true" />
                     <span className="r-contact__social-val">{s.label}</span>
                   </a>
@@ -126,7 +126,7 @@ export default function Contact({ onSubmit }) {
             </ul>
 
             <div className="r-contact__hours">
-              <h4>Working hours</h4>
+              <h4>{ui.availability}</h4>
               <p>{contact.workingHours}</p>
               <p className="r-contact__hours-note">
                 {contact.workingHoursNote}

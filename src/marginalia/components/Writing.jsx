@@ -1,22 +1,23 @@
 import { motion, useReducedMotion } from "framer-motion";
 import ChapterHeader from "./ChapterHeader";
-import { SITE } from "../config.jsx";
-import { WRITINGS } from "../data/writings";
+import { useLanguage } from "../i18n/context";
+import { LinkedInIcon } from "./Icons";
 import "./Writing.css";
 
-const fmt = (iso) =>
-  new Date(iso).toLocaleDateString("en-GB", {
+const fmt = (iso, locale) =>
+  new Date(`${iso}T12:00:00`).toLocaleDateString(locale, {
     day: "numeric",
     month: "short",
     year: "numeric",
   });
 
 export default function Writing() {
+  const { site: SITE, writings, ui, locale } = useLanguage();
   const reduce = useReducedMotion();
   const { writing } = SITE;
 
   return (
-    <section id="experience" className="r-writing" aria-label="Professional experience">
+    <section id="experience" className="r-writing" aria-label={writing.label}>
       <div className="r-writing__container">
         <div className="r-writing__header">
           <ChapterHeader
@@ -29,7 +30,7 @@ export default function Writing() {
         </div>
 
         <ol className="r-writing__list">
-          {WRITINGS.map((w, i) => (
+          {writings.map((w, i) => (
             <motion.li
               key={w.id}
               className="r-writing__item"
@@ -48,7 +49,7 @@ export default function Writing() {
                   <h3 className="r-writing__name">{w.title}</h3>
                   <p className="r-writing__dek">{w.dek}</p>
                   <p className="r-writing__meta">
-                    <span>{fmt(w.date)}</span>
+                    <time dateTime={w.date}>{fmt(w.date, locale)}</time>
                     <span aria-hidden="true">·</span>
                     <span>{w.venue}</span>
                     <span aria-hidden="true">·</span>
@@ -61,8 +62,9 @@ export default function Writing() {
         </ol>
 
         <footer className="r-writing__footer">
-          <a href={writing.archiveHref} className="r-writing__more">
-            View full profile
+          <a href={writing.archiveHref} className="r-writing__more" aria-label={ui.profileLabel}>
+            <LinkedInIcon />
+            {ui.profile}
             <span aria-hidden="true">↗</span>
           </a>
         </footer>

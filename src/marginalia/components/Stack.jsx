@@ -1,16 +1,16 @@
 import { motion, useReducedMotion } from "framer-motion";
 import ChapterHeader from "./ChapterHeader";
-import { SITE } from "../config.jsx";
-import { STACK } from "../data/stack";
+import { useLanguage } from "../i18n/context";
 import "./Stack.css";
 
 export default function Stack() {
+  const { site: SITE, stack: STACK, ui } = useLanguage();
   const reduce = useReducedMotion();
   const { stack: cfg } = SITE;
   const totalCount = STACK.reduce((acc, c) => acc + c.items.length, 0);
 
   return (
-    <section id="stack" className="r-stack" aria-label="Stack and tools">
+    <section id="stack" className="r-stack" aria-label={cfg.label}>
       <div className="r-stack__container">
         <div className="r-stack__header">
           <ChapterHeader
@@ -24,14 +24,14 @@ export default function Stack() {
 
         <div className="r-stack__ledger">
           <div className="r-stack__ledger-head" aria-hidden="true">
-            <span>Category</span>
-            <span>Technology</span>
-            <span>Note</span>
+            <span>{ui.category}</span>
+            <span>{ui.technology}</span>
+            <span>{ui.note}</span>
           </div>
 
           {STACK.map((cat, ci) => (
             <motion.div
-              key={cat.category}
+              key={ci}
               className="r-stack__cat"
               initial={reduce ? false : { opacity: 0, y: 20 }}
               whileInView={reduce ? undefined : { opacity: 1, y: 0 }}

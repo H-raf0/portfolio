@@ -1,19 +1,14 @@
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { SITE } from "../config.jsx";
+import { motion, useReducedMotion } from "framer-motion";
+import { useLanguage } from "../i18n/context";
 import "./ScrollIndex.css";
 
-const SECTIONS = [
-  { id: "hero", numeral: "", label: "Home" },
-  { id: "work", numeral: SITE.work.numeral, label: "Projects" },
-  { id: "about", numeral: SITE.about.numeral, label: SITE.about.label },
-  { id: "experience", numeral: SITE.writing.numeral, label: SITE.writing.label },
-  { id: "stack", numeral: SITE.stack.numeral, label: "Skills" },
-  { id: "education", numeral: SITE.press.numeral, label: SITE.press.label },
-  { id: "contact", numeral: SITE.contact.numeral, label: SITE.contact.label },
-];
+const SECTION_IDS = ["hero", "work", "about", "experience", "stack", "education", "contact"];
 
 export default function ScrollIndex() {
+  const { site, ui } = useLanguage();
+  const reduce = useReducedMotion();
+  const sections = [{ id: "hero", numeral: "", label: ui.home }, ...site.hero.nav.map((entry) => ({ ...entry, id: entry.href.slice(1) }))];
   const [active, setActive] = useState("hero");
   const [visible, setVisible] = useState(false);
 
@@ -22,18 +17,18 @@ export default function ScrollIndex() {
       setVisible(window.scrollY > window.innerHeight * 0.4);
 
       // Find section currently in viewport center
-      const targets = SECTIONS.map((s) => {
-        const el = document.getElementById(s.id) || document.querySelector(`section[aria-label]`);
-        if (!el) return { id: s.id, top: Infinity };
+      const targets = SECTION_IDS.map((id) => {
+        const el = document.getElementById(id);
+        if (!el) return { id, top: Infinity };
         const r = el.getBoundingClientRect();
-        return { id: s.id, top: r.top };
+        return { id, top: r.top };
       });
 
       const trigger = window.innerHeight * 0.4;
       const current = targets
         .filter((target) => target.top <= trigger)
         .sort((a, b) => b.top - a.top)[0];
-      setActive(current?.id || SECTIONS[0].id);
+      setActive(current?.id || SECTION_IDS[0]);
     };
 
     handleScroll();
@@ -48,20 +43,24 @@ export default function ScrollIndex() {
   const handleJump = (id) => (e) => {
     e.preventDefault();
     const el = id === "hero" ? document.querySelector(".r-hero") : document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (el) {
+      window.history.replaceState(window.history.state, "", `#${id}`);
+      el.scrollIntoView({ behavior: reduce ? "instant" : "smooth", block: "start" });
+    }
   };
 
   return (
     <motion.aside
       className="r-index"
-      aria-label="Section index"
-      initial={{ opacity: 0, x: 20 }}
-      animate={{ opacity: visible ? 1 : 0, x: visible ? 0 : 20 }}
-      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+      aria-label={ui.index}
+      inert={!visible}
+      initial={false}
+      animate={{ opacity: visible ? 1 : 0, x: reduce || visible ? 0 : 20 }}
+      transition={{ duration: reduce ? 0 : 0.5, ease: [0.22, 1, 0.36, 1] }}
       style={{ pointerEvents: visible ? "auto" : "none" }}
     >
       <ol className="r-index__list">
-        {SECTIONS.map((s) => {
+        {sections.map((s) => {
           const isActive = active === s.id;
           return (
             <li key={s.id} className={`r-index__item ${isActive ? "is-active" : ""}`}>
