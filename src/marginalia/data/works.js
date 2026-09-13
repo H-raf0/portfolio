@@ -83,4 +83,18 @@ export const WORKS = [
     imageWidth: 1600, imageHeight: 793, imageFit: "contain",
     href: "https://github.com/H-raf0/rabbit-simulation",
   },
+  {
+    id: "portfolio",
+    numeral: "VII",
+    title: "Personal Portfolio",
+    role: "Frontend project",
+    year: "2026",
+    blurb: "A bilingual portfolio with a painting-inspired visual identity, scroll-driven scenes, framed project images, and accessible interactions. Built with React and Vite, with persistent EN/FR switching and a static deployment.",
+    tags: ["React", "Vite", "Framer Motion", "Lenis"],
+    thumb: "/assets/marginalia/projects/portfolio.webp",
+    imageAlt: "Portfolio homepage with a painted landscape, standing figure, serif introduction, and gold CV button.",
+    imageAltFr: "Accueil du portfolio avec paysage peint, personnage debout, présentation en caractères sérif et bouton CV doré.",
+    imageWidth: 1600, imageHeight: 1200, imageFit: "contain",
+    href: "https://github.com/H-raf0/portfolio",
+  },
 ];

@@ -8,7 +8,7 @@ fallback, so failed or delayed images do not move the surrounding content.
 
 ## Exactly where to put project images
 
-All six images are already included. Replace the file at the matching path below
+All seven images are already included. Replace the file at the matching path below
 to use a newer screenshot. These are filesystem paths relative to the repository
 root; the browser URL omits `public`.
 
@@ -20,11 +20,12 @@ root; the browser URL omits `public`.
 | Collaborative Game of Life | `public/assets/marginalia/projects/life-game.webp` | 1400 × 697 | 1600 × 1200, 4:3, WebP |
 | 2D Platformer Prototype | `public/assets/marginalia/projects/unity-platformer.webp` | 780 × 365 | 1600 × 1200, 4:3, WebP |
 | Rabbit Population Simulation | `public/assets/marginalia/projects/rabbit-simulation.webp` | 1600 × 793 | 1600 × 1200, 4:3, WebP |
+| Personal Portfolio | `public/assets/marginalia/projects/portfolio.webp` | 1600 × 1200 | 1600 × 1200, 4:3, WebP |
 
 **1600 × 1200 is an export target, not a requirement to enlarge small originals.**
 Keep a source at its native size when it is smaller. An 800 × 600 image is also
 adequate for standard-density cards. The supplied images preserve their source
-proportions and total approximately 245 KiB. No animated videos or GIFs are shipped.
+proportions and total approximately 341 KiB. No animated videos or GIFs are shipped.
 
 For detailed interfaces and plots, preserve the whole screenshot and use `contain`;
 the existing dark canvas becomes a gallery mat. A 4:3 export fills that area exactly.
@@ -65,7 +66,8 @@ column breakpoints remain. Motion is disabled when reduced motion is requested.
 ## Image provenance
 
 These are images of the actual projects, extracted from the owner's publicly
-linked recordings and repository output. They are not AI-generated interface mockups.
+linked recordings and repository output, or captured directly from this portfolio.
+They are not AI-generated interface mockups.
 Browser chrome and recording sidebars were cropped where possible. Keep the
 original project and any third-party asset credits when reusing images elsewhere.
 
@@ -77,6 +79,7 @@ original project and any third-party asset credits when reusing images elsewhere
 | Collaborative Game of Life | [Demo linked by the README](https://github.com/user-attachments/assets/02b51196-7712-404b-9e08-a60ad343a547), frame at about 52.88 s; browser chrome cropped and width reduced to 1400 px. |
 | 2D Platformer Prototype | [Gameplay GIF](https://github.com/H-raf0/Unity2DGamePlatformer/blob/HEAD/myGameGIf.gif), frame 100. |
 | Rabbit Population Simulation | [Population chart](https://github.com/H-raf0/rabbit-simulation/blob/HEAD/01_population_over_time.png), reduced to 1600 px wide with axes and legend preserved. |
+| Personal Portfolio | Screenshot of this repository's English homepage, captured locally in Chromium at 1600 × 1200 after fonts and artwork loaded, with reduced motion enabled; encoded as WebP. Also used as the README preview. |
 
 The captures retain text from the original applications/plots. Portfolio text and
 image alternatives translate, but text baked into a screenshot is not changed.
@@ -171,19 +174,20 @@ Deferred to avoid unrelated changes:
   (five high, one moderate, one low), including Vite and build-tool dependencies.
   A dependency update should be reviewed separately; no automatic audit fix was run.
 
-No background asset conversion, deployment change, project content expansion,
-license change, or new runtime dependency was included.
+No background asset conversion, deployment change, license change, or new runtime
+dependency was included. The portfolio itself was subsequently added as project VII,
+with English/French content and a screenshot, at the owner's request.
 
 ## Verification
 
 - `npm run lint`, `npm run build`, and `git diff --check` passed.
 - The production build was checked in Chromium at 320, 390, 768, 1024, and 1440 px,
-  in both EN and FR. The CV was visible, all six images loaded, and the page had no
+  in both EN and FR. The CV was visible, all seven images loaded, and the page had no
   horizontal overflow.
 - Browser checks covered keyboard activation/focus, translated headings/dates/meta,
   hash navigation, refresh persistence, blocked localStorage, contact-draft
   preservation, the actual PDF response, and the LinkedIn destination/icon.
-- All six image requests were deliberately failed; each displayed its original
+- All seven image requests were deliberately failed; each displayed its original
   Roman-numeral fallback in the same reserved 4:3 area.
 - Normal and reduced-motion interactions passed with no uncaught browser errors.
 - `package.json` and `package-lock.json` are unchanged. Browser/image-processing
