@@ -1,10 +1,11 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 import ChapterHeader from "./ChapterHeader";
-import { SITE } from "../config.jsx";
+import { useLanguage } from "../i18n/context";
 import "./About.css";
 
 export default function About() {
+  const { site: SITE } = useLanguage();
   const ref = useRef(null);
   const reduce = useReducedMotion();
 
@@ -17,7 +18,7 @@ export default function About() {
   const { about } = SITE;
 
   return (
-    <section ref={ref} id="about" className="r-about" aria-label="About">
+    <section ref={ref} id="about" className="r-about" aria-label={about.label}>
       <motion.div className="r-about__content" style={{ y: textY }}>
         <ChapterHeader
           align="left"

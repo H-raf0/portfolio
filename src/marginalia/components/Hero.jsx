@@ -1,9 +1,12 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
-import { SITE } from "../config.jsx";
+import { useLanguage } from "../i18n/context";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { DownloadIcon } from "./Icons";
 import "./Hero.css";
 
 export default function Hero() {
+  const { site: SITE, ui } = useLanguage();
   const ref = useRef(null);
   const reduce = useReducedMotion();
 
@@ -21,7 +24,7 @@ export default function Hero() {
   const { hero, owner, assets } = SITE;
 
   return (
-    <section ref={ref} id="hero" className="r-hero" aria-label="Hero">
+    <section ref={ref} id="hero" className="r-hero" aria-label={ui.hero}>
       {/* Sky / background painting (kept as fallback if SkyCanvas not used) */}
       <motion.div className="r-hero__bg" style={{ y: bgY }}>
         <img src={assets.bg} alt="" aria-hidden="true" draggable="false" />
@@ -40,14 +43,16 @@ export default function Hero() {
         <div className="r-hero__nav-right">
           {hero.topRight.map((item) => (
             <a
-              key={item.label}
-              className={item.kind === "cta" ? "r-hero__nav-cta" : "r-hero__nav-link"}
+              key={item.href}
+              className={item.download ? "r-hero__cv" : "r-hero__nav-cta"}
               href={item.href}
               download={item.download || undefined}
             >
+              {item.download && <DownloadIcon />}
               {item.label}
             </a>
           ))}
+          <LanguageSwitcher />
         </div>
       </motion.header>
 
@@ -67,9 +72,9 @@ export default function Hero() {
 
             <p className="r-hero__lede">{hero.lede}</p>
 
-            <ul className="r-hero__nav-list" aria-label="Sections">
+            <ul className="r-hero__nav-list" aria-label={ui.sections}>
               {hero.nav.map((item) => (
-                <li key={item.label} className="r-hero__nav-row">
+                <li key={item.href} className="r-hero__nav-row">
                   <a href={item.href} className="r-hero__nav-row-link">
                     <span className="r-hero__nav-row-label">{item.label}</span>
                     <span className="r-hero__nav-row-rule" aria-hidden="true" />
@@ -84,7 +89,7 @@ export default function Hero() {
 
       {/* Scroll cue */}
       <div className="r-hero__scroll-cue" aria-hidden="true">
-        <span>Scroll</span>
+        <span>{ui.scroll}</span>
         <span className="r-hero__scroll-line" />
       </div>
     </section>

@@ -251,6 +251,8 @@
   );
 }
 .r-contact__social-val {
+  min-width: 0;
+  overflow-wrap: anywhere;
   font-family: var(--r-font-body);
   font-size: 0.9rem;
   color: var(--r-ivory);
@@ -288,4 +290,10 @@
   }
   .r-letter { padding: 2.5rem 1.5rem 1.5rem; }
   .r-letter__seal { right: 16px; width: 48px; height: 48px; font-size: 1rem; }
+}
+
+@media (max-width: 420px) {
+  .r-contact__social { grid-template-columns: auto minmax(0, 1fr); }
+  .r-contact__social-rule { display: none; }
+  .r-letter { padding-inline: 1rem; }
 }
