@@ -3,7 +3,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { useLanguage } from "../i18n/context";
 import "./ScrollIndex.css";
 
-const SECTION_IDS = ["hero", "work", "about", "experience", "stack", "education", "contact"];
+const SECTION_IDS = ["hero", "about", "work", "experience", "stack", "education", "contact"];
 
 export default function ScrollIndex() {
   const { site, ui } = useLanguage();

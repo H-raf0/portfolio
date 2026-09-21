@@ -32,16 +32,16 @@ const FR_SITE = {
     titleLine1: "Concevoir",
     titleLine2Italic: "des logiciels utiles",
     lede: "Étudiant ingénieur en informatique et développeur full-stack. J’aime transformer des problèmes concrets en applications web fiables et soignées.",
-    nav: SITE.hero.nav.map((item, i) => ({ ...item, label: ["Projets", "À propos", "Expérience", "Compétences", "Formation", "Contact"][i] })),
+    nav: SITE.hero.nav.map((item) => ({ ...item, label: { "#about": "À propos", "#work": "Projets", "#experience": "Expérience", "#stack": "Compétences", "#education": "Formation", "#contact": "Contact" }[item.href] })),
     topRight: SITE.hero.topRight.map((item) => ({ ...item, label: item.download ? "Télécharger le CV" : "Me contacter" })),
   },
   about: {
     ...SITE.about, label: "À propos",
-    title: <>Concevoir des systèmes <em>clairs, utiles et fiables.</em></>,
+    title: <>Un peu de magie, <em>beaucoup de code.</em></>,
     body: [
-      "Je suis étudiant ingénieur à l’ISIMA, à Clermont-Ferrand, spécialisé en génie logiciel et systèmes d’information.",
-      "Mon travail couvre toute la chaîne : des interfaces qui simplifient les tâches complexes, des API fiables en production et des processus de livraison qui facilitent le passage du code au déploiement.",
-      "J’apprécie particulièrement les projets soumis à des contraintes concrètes — données, équipements, performance ou collaboration — où une conception réfléchie fait la différence.",
+      "Je suis Achraf, étudiant ingénieur à l’ISIMA, à Clermont-Ferrand, et apprenti mage du logiciel à mes heures perdues. Mon grimoire est un éditeur de code ; mon mana, de l’électricité. Heureusement, les prises sont plus faciles à trouver que les cristaux enchantés.",
+      "J’aime assembler des sorts — du code — pour donner vie à des idées : une application utile, une API solide ou un petit monde jouable. Du frontend au backend, je cherche la bonne formule pour que tout fonctionne ensemble.",
+      "Ma quête : créer des logiciels clairs, fiables et agréables à utiliser, tout en progressant en génie logiciel. Et quand un bug résiste à mes incantations, je sors mon artefact le plus puissant : le débogueur.",
     ],
     stats: [
       { num: "3", label: "Langues", note: "Français · anglais · arabe" },

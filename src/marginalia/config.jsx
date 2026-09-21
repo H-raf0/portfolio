@@ -16,8 +16,8 @@ export const SITE = {
     folioLabel: "Portfolio · 2026",
     lede: <>Software engineering student and full-stack developer. I enjoy turning practical problems into reliable, well-crafted web applications.</>,
     nav: [
-      { label: "Projects", numeral: "I", href: "#work" },
-      { label: "About", numeral: "II", href: "#about" },
+      { label: "About", numeral: "I", href: "#about" },
+      { label: "Projects", numeral: "II", href: "#work" },
       { label: "Experience", numeral: "III", href: "#experience" },
       { label: "Skills", numeral: "IV", href: "#stack" },
       { label: "Education", numeral: "V", href: "#education" },
@@ -29,12 +29,12 @@ export const SITE = {
     ],
   },
   about: {
-    numeral: "II", label: "About",
-    title: <>Building systems that are <em>clear, useful, and dependable.</em></>,
+    numeral: "I", label: "About",
+    title: <>A little magic, <em>a lot of code.</em></>,
     body: [
-      "I am an engineering student at ISIMA in Clermont-Ferrand, specialising in software engineering and information systems.",
-      "My work spans the full stack: interfaces that make complex tasks feel straightforward, APIs that hold up in production, and delivery workflows that keep the path from code to deployment tidy.",
-      "I am especially drawn to projects with real constraints—data, devices, performance, or collaboration—where thoughtful engineering makes a visible difference.",
+      "I’m Achraf, an engineering student at ISIMA in Clermont-Ferrand and an apprentice software mage in my spare time. My spellbook is a code editor; my mana is electricity. Luckily, power sockets are easier to find than enchanted crystals.",
+      "I enjoy weaving spells — code — to bring ideas to life: a useful application, a dependable API, or a small playable world. From frontend to backend, I look for the right formula to make everything work together.",
+      "My quest: to build clear, reliable software that feels good to use, while growing as a software engineer. And when a bug resists my incantations, I reach for my most powerful artifact: the debugger.",
     ],
     signature: "— Achraf El Allali", signatureMeta: "Clermont-Ferrand · France",
     stats: [
@@ -45,7 +45,7 @@ export const SITE = {
     ],
   },
   work: {
-    numeral: "I", label: "Selected Projects",
+    numeral: "II", label: "Selected Projects",
     title: <>Things I have <em>built and explored</em></>,
     lede: "A selection of full-stack, backend, and architecture work from coursework and personal projects.",
   },
@@ -81,5 +81,5 @@ export const SITE = {
       { label: "LinkedIn", href: "https://www.linkedin.com/in/achraf-el-allali" },
     ],
   },
-  assets: { bg: "/assets/marginalia/bg-01-dawn.png", figure: "/assets/marginalia/figure-01-standing.png" },
+  assets: { bg: "/assets/marginalia/bg-01-dawn.webp", figure: "/assets/marginalia/figure-01-standing.webp" },
 };
