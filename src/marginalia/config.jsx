@@ -1,3 +1,5 @@
+import { WORKS } from "./data/works";
+
 export const SITE = {
   title: "Achraf El Allali — Software Engineering Student & Developer",
   description:
@@ -38,10 +40,10 @@ export const SITE = {
     ],
     signature: "— Achraf El Allali", signatureMeta: "Clermont-Ferrand · France",
     stats: [
-      { num: "3", label: "Languages", note: "French · English · Arabic" },
-      { num: "2", label: "CTCPA roles", note: "full-stack development" },
-      { num: "4", label: "Core layers", note: "UI · API · data · delivery" },
-      { num: "1", label: "Focus", note: "software engineering" },
+      { num: String(WORKS.length), label: "Featured projects", note: "web · games · simulation" },
+      { num: "2", label: "Team projects", note: "OCULA · Incremental Game API" },
+      { num: "3", label: "Backend stacks", note: ".NET · Spring Boot · FastAPI" },
+      { num: "3", label: "Spoken languages", note: "French · English · Arabic" },
     ],
   },
   work: {

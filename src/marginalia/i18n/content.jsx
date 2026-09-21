@@ -44,10 +44,10 @@ const FR_SITE = {
       "Ma quête : créer des logiciels clairs, fiables et agréables à utiliser, tout en progressant en génie logiciel. Et quand un bug résiste à mes incantations, je sors mon artefact le plus puissant : le débogueur.",
     ],
     stats: [
-      { num: "3", label: "Langues", note: "Français · anglais · arabe" },
-      { num: "2", label: "Postes au CTCPA", note: "développement full-stack" },
-      { num: "4", label: "Couches clés", note: "UI · API · données · livraison" },
-      { num: "1", label: "Spécialité", note: "génie logiciel" },
+      { num: String(WORKS.length), label: "Projets présentés", note: "web · jeux · simulation" },
+      { num: "2", label: "Projets en équipe", note: "OCULA · API de jeu incrémental" },
+      { num: "3", label: "Stacks backend", note: ".NET · Spring Boot · FastAPI" },
+      { num: "3", label: "Langues parlées", note: "Français · anglais · arabe" },
     ],
   },
   work: {
