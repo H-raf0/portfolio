@@ -33,7 +33,7 @@
 
 @media (max-width: 768px) {
   .r-pf {
-    height: 80vh;
-    opacity: 0.4;
+    /* Keep the decorative portrait out of the reading area on mobile. */
+    display: none;
   }
 }
