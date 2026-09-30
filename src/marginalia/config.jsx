@@ -1,4 +1,5 @@
 import { WORKS } from "./data/works";
+import { CV_FILES } from "./data/press";
 
 export const SITE = {
   title: "Achraf El Allali — Software Engineering Student & Developer",
@@ -26,7 +27,7 @@ export const SITE = {
       { label: "Contact", numeral: "VI", href: "#contact" },
     ],
     topRight: [
-      { kind: "link", label: "Download CV", href: "/assets/marginalia/CV_Achraf_EL_ALLALI_Dev_Stage.pdf", download: true },
+      { kind: "link", label: "Download CV", href: CV_FILES.en, download: true },
       { kind: "cta", label: "Get in touch", href: "#contact" },
     ],
   },

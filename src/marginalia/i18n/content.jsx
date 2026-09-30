@@ -2,7 +2,7 @@ import { SITE } from "../config.jsx";
 import { WORKS } from "../data/works";
 import { WRITINGS } from "../data/writings";
 import { STACK } from "../data/stack";
-import { PRESS_DOWNLOADS, PRESS_FACTS, PRESS_MENTIONS } from "../data/press";
+import { CV_FILES, PRESS_DOWNLOADS, PRESS_FACTS, PRESS_MENTIONS } from "../data/press";
 
 const EN_UI = {
   language: "Language", languageChanged: "Language changed to English.",
@@ -33,7 +33,11 @@ const FR_SITE = {
     titleLine2Italic: "des logiciels utiles",
     lede: "Étudiant ingénieur en informatique et développeur full-stack. J’aime transformer des problèmes concrets en applications web fiables et soignées.",
     nav: SITE.hero.nav.map((item) => ({ ...item, label: { "#about": "À propos", "#work": "Projets", "#experience": "Expérience", "#stack": "Compétences", "#education": "Formation", "#contact": "Contact" }[item.href] })),
-    topRight: SITE.hero.topRight.map((item) => ({ ...item, label: item.download ? "Télécharger le CV" : "Me contacter" })),
+    topRight: SITE.hero.topRight.map((item) => ({
+      ...item,
+      label: item.download ? "Télécharger le CV" : "Me contacter",
+      href: item.download ? CV_FILES.fr : item.href,
+    })),
   },
   about: {
     ...SITE.about, label: "À propos",
@@ -130,7 +134,12 @@ export const CONTENT = {
       { title: "Stagiaire développeur full-stack · CTCPA", dek: "Développement de modules IoT et d’API ; travail sur une PWA Svelte 5 et Tailwind, avec des services .NET Core et FastAPI, le mode hors ligne, Docker, PostgreSQL, SQLite et la CI/CD.", venue: "Stage · mars 2026 – août 2026" },
     ][i] })),
     stack: STACK.map((category, i) => ({ ...category, category: FR_STACK[i].category, items: category.items.map((item, j) => ({ ...item, note: FR_STACK[i].notes[j] })) })),
-    downloads: PRESS_DOWNLOADS.map((entry, i) => ({ ...entry, label: ["Télécharger le CV", "Profil GitHub", "Profil LinkedIn", "Contacter Achraf"][i], note: ["PDF · 243 Ko", "Projets & code source", "Expérience & contact", "Engager la discussion"][i] })),
+    downloads: PRESS_DOWNLOADS.map((entry, i) => ({
+      ...entry,
+      label: ["Télécharger le CV", "Profil GitHub", "Profil LinkedIn", "Contacter Achraf"][i],
+      note: ["PDF · 243 Ko", "Projets & code source", "Expérience & contact", "Engager la discussion"][i],
+      href: entry.download ? CV_FILES.fr : entry.href,
+    })),
     facts: [
       { k: "Localisation", v: "Clermont-Ferrand, France" },
       { k: "Études", v: "Génie logiciel à l’ISIMA" },

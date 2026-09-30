@@ -1,10 +1,15 @@
+export const CV_FILES = {
+  en: "/assets/marginalia/CV_Achraf_EL_ALLALI_Dev_Internship.pdf",
+  fr: "/assets/marginalia/CV_Achraf_EL_ALLALI_Dev_Stage.pdf",
+};
+
 export const PRESS_MENTIONS = [
   { id: "isima", venue: "ISIMA", title: "Engineering degree in Computer Science · Software Engineering & Information Systems", date: "2024-09", href: "https://www.isima.fr/" },
   { id: "uca", venue: "Université Clermont Auvergne", title: "Bachelor’s degree in Computer Science", date: "2022-09", href: "https://www.uca.fr/" },
   { id: "angular-course", venue: "Udemy", title: "Angular – The Complete Guide", date: "2026", href: "https://www.udemy.com/course/the-complete-guide-to-angular-2/" },
 ];
 export const PRESS_DOWNLOADS = [
-  { id: "cv", label: "Download CV", note: "PDF · 243 KB", href: "/assets/marginalia/CV_Achraf_EL_ALLALI_Dev_Stage.pdf", download: true },
+  { id: "cv", label: "Download CV", note: "PDF · 243 KB", href: CV_FILES.en, download: true },
   { id: "github", label: "GitHub profile", note: "Projects & source code", href: "https://github.com/H-raf0" },
   { id: "linkedin", label: "LinkedIn profile", note: "Experience & contact", href: "https://www.linkedin.com/in/achraf-el-allali" },
   { id: "email", label: "Email Achraf", note: "Open a conversation", href: "mailto:achrafelallali123@gmail.com" },
