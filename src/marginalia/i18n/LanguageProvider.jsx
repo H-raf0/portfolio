@@ -12,7 +12,7 @@ function initialLanguage() {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (isLanguage(saved)) return saved;
   } catch { /* Storage may be unavailable in private browsing. */ }
-  return "en";
+  return "fr";
 }
 
 export default function LanguageProvider({ children }) {
