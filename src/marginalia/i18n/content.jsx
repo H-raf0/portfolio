@@ -139,7 +139,7 @@ export const CONTENT = {
     downloads: PRESS_DOWNLOADS.map((entry, i) => ({
       ...entry,
       label: ["Télécharger le CV", "Profil GitHub", "Profil LinkedIn", "Contacter Achraf"][i],
-      note: ["PDF · 2 Mo", "Projets & code source", "Expérience & contact", "Engager la discussion"][i],
+      note: ["PDF · 255 Ko", "Projets & code source", "Expérience & contact", "Engager la discussion"][i],
       href: entry.download ? CV_FILES.fr : entry.href,
     })),
     facts: [
