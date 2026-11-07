@@ -31,7 +31,7 @@ const FR_SITE = {
     ...SITE.hero,
     titleLine1: "Concevoir",
     titleLine2Italic: "des logiciels utiles",
-    lede: "Étudiant ingénieur en informatique et développeur full-stack. J’aime transformer des problèmes concrets en applications web fiables et soignées.",
+    lede: "Étudiant ingénieur en informatique et développeur full-stack, entre web, IA générative et DevOps. J’aime transformer des problèmes concrets en applications web fiables et soignées.",
     nav: SITE.hero.nav.map((item) => ({ ...item, label: { "#about": "À propos", "#work": "Projets", "#experience": "Expérience", "#stack": "Compétences", "#education": "Formation", "#contact": "Contact" }[item.href] })),
     topRight: SITE.hero.topRight.map((item) => ({
       ...item,
@@ -62,7 +62,7 @@ const FR_SITE = {
   writing: {
     ...SITE.writing, label: "Expérience",
     title: <>Apprendre en <em>développant</em></>,
-    lede: "Une expérience full-stack concrète sur une plateforme IoT, des fonctionnalités produit à l’infrastructure de déploiement.",
+    lede: "Une expérience concrète sur une plateforme IoT, des fonctionnalités produit et du firmware des capteurs jusqu’à l’observabilité et l’infrastructure de déploiement — et un podium en hackathon IA bancaire.",
   },
   stack: {
     ...SITE.stack, label: "Compétences & technologies",
@@ -78,7 +78,7 @@ const FR_SITE = {
   contact: {
     ...SITE.contact,
     title: <>Créons quelque chose <em>d’utile</em></>,
-    lede: "Je recherche un stage en développement logiciel à partir de mars 2027. N’hésitez pas à me contacter pour une opportunité, un projet ou un échange technique.",
+    lede: "Je recherche un stage de fin d’études en génie logiciel à partir de mars 2027. N’hésitez pas à me contacter pour une opportunité, un projet ou un échange technique.",
     workingHours: "Basé en France · ouvert aux opportunités",
     workingHoursNote: "Ce formulaire ouvre votre messagerie avec un message prérempli.",
   },
@@ -91,7 +91,7 @@ const FR_SITE = {
 
 const FR_WORKS = {
   portfolio: { title: "Portfolio personnel", role: "Projet frontend", blurb: "Un portfolio bilingue à l’identité visuelle inspirée de la peinture, avec des scènes animées au défilement, des projets encadrés et des interactions accessibles. Réalisé avec React et Vite, avec sélection EN/FR persistante et déploiement statique." },
-  ocula: { role: "Projet full-stack en équipe", blurb: "Une application d’analyse vidéo pour importer des séquences, générer des transcriptions et explorer leur contenu grâce à des résumés et des questions assistés par IA." },
+  ocula: { role: "Projet full-stack en équipe", blurb: "Une application web d’analyse vidéo par IA générative : importer des vidéos, les transcrire et interroger leur contenu via un chatbot reposant sur un pipeline RAG (embeddings et recherche sémantique), conteneurisée avec Docker et déployée sur Azure Blob Storage." },
   "incremental-game": { title: "API de jeu incrémental", role: "Projet backend en équipe", blurb: "Un backend persistant en ASP.NET Core pour un jeu incrémental : progression, améliorations, succès, authentification, événements en temps réel et tests." },
   "labyrinth-2d": { role: "Projet de développement de jeu", blurb: "Un jeu d’évasion dans un labyrinthe 2D procédural avec SDL2, des ennemis intelligents aux comportements multiples et une recherche de chemin par BFS, Dijkstra et A*." },
   "life-game": { title: "Jeu de la vie collaboratif", role: "Projet d’application web", blurb: "Un éditeur multi-utilisateurs pour le Jeu de la vie de Conway : canevas interactif, grille partagée, transactions, import de motifs RLE et commandes de simulation." },
@@ -101,10 +101,11 @@ const FR_WORKS = {
 
 const FR_TAGS = { Algorithms: "Algorithmes", "Game AI": "IA de jeu", Physics: "Physique", "Scene Management": "Gestion des scènes", "Data Visualisation": "Visualisation de données" };
 const FR_STACK = [
-  { category: "Langages", notes: ["API et services backend", "Spring et architecture logicielle", "services IA et outils backend", "systèmes et projets académiques", "développement frontend typé"] },
-  { category: "Frontend", notes: ["interfaces web modernes et réactives", "applications monopages structurées", "interfaces sémantiques et adaptatives", "création d’interfaces rapide et cohérente"] },
-  { category: "Backend & données", notes: ["API REST et services applicatifs", "développement d’API Python", "services web Java", "données applicatives relationnelles", "stockage léger et relationnel"] },
-  { category: "Livraison", notes: ["environnements locaux et de préproduction reproductibles", "bases de l’orchestration de conteneurs", "qualité et déploiement automatisés", "gestion collaborative du code source", "environnement de développement et de déploiement"] },
+  { category: "Langages", notes: ["API et services backend", "Spring et architecture logicielle", "services IA et outils backend", "capteurs embarqués et projets systèmes", "développement frontend typé"] },
+  { category: "Frontend", notes: ["interfaces web modernes et réactives", "applications monopages structurées", "interfaces à base de composants", "interfaces sémantiques et adaptatives", "création d’interfaces rapide et cohérente"] },
+  { category: "Backend & données", notes: ["API REST en architecture Vertical Slice", "développement d’API Python", "services web Java", "données applicatives relationnelles", "stockage léger et relationnel"] },
+  { category: "IA", notes: ["assistants personnalisés et IA générative", "réponses ancrées dans des documents et médias", "recherche sémantique avec ChromaDB"] },
+  { category: "DevOps & cloud", notes: ["environnements locaux et de préproduction reproductibles", "bases de l’orchestration de conteneurs", "qualité et déploiement automatisés", "hébergement cloud et stockage objet", "gestion collaborative du code source", "environnement de développement et de déploiement"] },
 ];
 
 export const CONTENT = {
@@ -130,23 +131,24 @@ export const CONTENT = {
     },
     works: WORKS.map((work) => ({ ...work, ...FR_WORKS[work.id], tags: work.tags.map((tag) => FR_TAGS[tag] || tag), imageAlt: work.imageAltFr })),
     writings: WRITINGS.map((entry, i) => ({ ...entry, ...[
-      { title: "Développeur full-stack · CTCPA", dek: "Maintenance et évolution d’une plateforme IoT : performance, expérience utilisateur, qualité du code, architecture et processus de déploiement.", venue: "CDD · sept. 2026 – févr. 2027" },
-      { title: "Stagiaire développeur full-stack · CTCPA", dek: "Développement de modules IoT et d’API ; travail sur une PWA Svelte 5 et Tailwind, avec des services .NET Core et FastAPI, le mode hors ligne, Docker, PostgreSQL, SQLite et la CI/CD.", venue: "Stage · mars 2026 – août 2026" },
+      { title: "Développeur logiciel · CTCPA", dek: "Poursuite du développement de la plateforme IoT HeatSight : observabilité (métriques, logs structurés, Sentry), programmation des capteurs en C avec STM32Cube, CI/CD et optimisation sur Scaleway, revues de cybersécurité et support IT avec Intune, Entra ID et WatchGuard.", venue: "CDD · sept. 2026 – févr. 2027" },
+      { title: "Hackathon IA bancaire – 3e place · Sopra Steria × Crédit Agricole", dek: "Conception de Smith, un assistant bancaire : frontend Angular, backend FastAPI, moteur déterministe « Safe to Spend », LLM LangChain personnalisé et RAG avec ChromaDB et des embeddings Hugging Face.", venue: "Hackathon · oct. 2026" },
+      { title: "Stagiaire développeur full-stack · CTCPA", dek: "Développement de modules IoT (échelle semi-log, réservation, étalonnage des capteurs) et d’API FastEndpoints en architecture Vertical Slice ; travail sur une PWA offline-first Svelte 5 et Tailwind avec un backend REST .NET Core, la conteneurisation Docker et des pipelines CI/CD multi-environnements.", venue: "Stage · mars 2026 – août 2026" },
     ][i] })),
     stack: STACK.map((category, i) => ({ ...category, category: FR_STACK[i].category, items: category.items.map((item, j) => ({ ...item, note: FR_STACK[i].notes[j] })) })),
     downloads: PRESS_DOWNLOADS.map((entry, i) => ({
       ...entry,
       label: ["Télécharger le CV", "Profil GitHub", "Profil LinkedIn", "Contacter Achraf"][i],
-      note: ["PDF · 243 Ko", "Projets & code source", "Expérience & contact", "Engager la discussion"][i],
+      note: ["PDF · 2 Mo", "Projets & code source", "Expérience & contact", "Engager la discussion"][i],
       href: entry.download ? CV_FILES.fr : entry.href,
     })),
     facts: [
       { k: "Localisation", v: "Clermont-Ferrand, France" },
       { k: "Études", v: "Génie logiciel à l’ISIMA" },
-      { k: "Recherche", v: "Stage à partir de mars 2027" },
+      { k: "Recherche", v: "Stage de fin d’études à partir de mars 2027" },
       { k: "Langues", v: "Français · anglais · arabe" },
       { k: "Centres d’intérêt", v: "Échecs · sport · lecture" },
     ],
-    mentions: PRESS_MENTIONS.map((entry, i) => ({ ...entry, title: ["Diplôme d’ingénieur en informatique · Génie logiciel & systèmes d’information", "Licence informatique", "Angular – The Complete Guide"][i] })),
+    mentions: PRESS_MENTIONS.map((entry, i) => ({ ...entry, title: ["Diplôme d’ingénieur en informatique · Génie logiciel & systèmes informatiques", "Licence informatique · Mathématiques-informatique", "Angular – The Complete Guide"][i] })),
   },
 };

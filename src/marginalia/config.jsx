@@ -17,7 +17,7 @@ export const SITE = {
     titleLine1: "Building",
     titleLine2Italic: "useful software",
     folioLabel: "Portfolio · 2026",
-    lede: <>Software engineering student and full-stack developer. I enjoy turning practical problems into reliable, well-crafted web applications.</>,
+    lede: <>Software engineering student and full-stack developer working across the web, generative AI, and DevOps. I enjoy turning practical problems into reliable, well-crafted web applications.</>,
     nav: [
       { label: "About", numeral: "I", href: "#about" },
       { label: "Projects", numeral: "II", href: "#work" },
@@ -55,7 +55,7 @@ export const SITE = {
   writing: {
     numeral: "III", label: "Experience",
     title: <>Learning by <em>shipping</em></>,
-    lede: "Hands-on full-stack experience on an IoT platform, from product features to delivery infrastructure.",
+    lede: "Hands-on experience on an IoT platform, from product features and sensor firmware to observability and delivery infrastructure — plus a podium finish at an AI banking hackathon.",
     archiveHref: "https://www.linkedin.com/in/achraf-el-allali",
   },
   stack: {
@@ -72,7 +72,7 @@ export const SITE = {
   contact: {
     numeral: "VI", label: "Contact",
     title: <>Let’s build something <em>useful</em></>,
-    lede: "I am looking for a software-development internship from March 2027. Feel free to reach out about an opportunity, a project, or a technical conversation.",
+    lede: "I am looking for a final-year software-engineering internship from March 2027. Feel free to reach out about an opportunity, a project, or a technical conversation.",
     workingHours: "Based in France · open to opportunities",
     workingHoursNote: "The form opens your email client with a prefilled message.",
   },
