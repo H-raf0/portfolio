@@ -78,7 +78,7 @@ const FR_SITE = {
   contact: {
     ...SITE.contact,
     title: <>Créons quelque chose <em>d’utile</em></>,
-    lede: "Je recherche un stage de fin d’études en génie logiciel à partir de mars 2027. N’hésitez pas à me contacter pour une opportunité, un projet ou un échange technique.",
+    lede: "Je recherche un stage de fin d’études en génie logiciel à partir d’avril 2027. N’hésitez pas à me contacter pour une opportunité, un projet ou un échange technique.",
     workingHours: "Basé en France · ouvert aux opportunités",
     workingHoursNote: "Ce formulaire ouvre votre messagerie avec un message prérempli.",
   },
@@ -145,7 +145,7 @@ export const CONTENT = {
     facts: [
       { k: "Localisation", v: "Clermont-Ferrand, France" },
       { k: "Études", v: "Génie logiciel à l’ISIMA" },
-      { k: "Recherche", v: "Stage de fin d’études à partir de mars 2027" },
+      { k: "Recherche", v: "Stage de fin d’études à partir d’avril 2027" },
       { k: "Langues", v: "Français · anglais · arabe" },
       { k: "Centres d’intérêt", v: "Échecs · sport · lecture" },
     ],

@@ -72,7 +72,7 @@ export const SITE = {
   contact: {
     numeral: "VI", label: "Contact",
     title: <>Let’s build something <em>useful</em></>,
-    lede: "I am looking for a final-year software-engineering internship from March 2027. Feel free to reach out about an opportunity, a project, or a technical conversation.",
+    lede: "I am looking for a final-year software-engineering internship from April 2027. Feel free to reach out about an opportunity, a project, or a technical conversation.",
     workingHours: "Based in France · open to opportunities",
     workingHoursNote: "The form opens your email client with a prefilled message.",
   },

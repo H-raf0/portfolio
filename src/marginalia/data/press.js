@@ -15,5 +15,5 @@ export const PRESS_DOWNLOADS = [
   { id: "email", label: "Email Achraf", note: "Open a conversation", href: "mailto:achrafelallali123@gmail.com" },
 ];
 export const PRESS_FACTS = [
-  { k: "Based", v: "Clermont-Ferrand, France" }, { k: "Studying", v: "Software engineering at ISIMA" }, { k: "Seeking", v: "Final-year internship from March 2027" }, { k: "Languages", v: "French · English · Arabic" }, { k: "Interests", v: "Chess · sport · reading" },
+  { k: "Based", v: "Clermont-Ferrand, France" }, { k: "Studying", v: "Software engineering at ISIMA" }, { k: "Seeking", v: "Final-year internship from April 2027" }, { k: "Languages", v: "French · English · Arabic" }, { k: "Interests", v: "Chess · sport · reading" },
 ];
