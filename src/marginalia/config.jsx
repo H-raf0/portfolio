@@ -41,7 +41,7 @@ export const SITE = {
     ],
     signature: "— Achraf El Allali", signatureMeta: "Clermont-Ferrand · France",
     stats: [
-      { num: String(WORKS.length), label: "Featured projects", note: "web · games · simulation" },
+      { num: String(WORKS.length), label: "Featured projects", note: "web · games · software testing" },
       { num: "2", label: "Team projects", note: "OCULA · Incremental Game API" },
       { num: "3", label: "Backend stacks", note: ".NET · Spring Boot · FastAPI" },
       { num: "3", label: "Spoken languages", note: "French · English · Arabic" },
@@ -50,7 +50,7 @@ export const SITE = {
   work: {
     numeral: "II", label: "Selected Projects",
     title: <>Things I have <em>built and explored</em></>,
-    lede: "A selection of full-stack, backend, and architecture work from coursework and personal projects.",
+    lede: "A selection of full-stack, backend, and software validation work from coursework and personal projects.",
   },
   writing: {
     numeral: "III", label: "Experience",

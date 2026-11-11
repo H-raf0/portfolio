@@ -7,7 +7,7 @@ Personal portfolio for Achraf El Allali, a software engineering student at ISIMA
 ## Highlights
 
 - Personal introduction, experience, education, skills, projects, and contact details
-- Seven featured projects, including this portfolio, with screenshots and GitHub links
+- Eight featured projects, including this portfolio, with GitHub links; seven have screenshots
 - Complete English/French interface, with a language preference preserved across navigation and reloads
 - Painting-inspired visual identity: serif typography, gold frames, and scroll-driven scenes
 - Responsive project gallery with lazy-loaded WebP images and Roman-numeral fallbacks
@@ -83,7 +83,7 @@ recommended dimensions, source credits, language behavior, and related design ch
 - `src/marginalia/data/press.js` — education, training, and profile links
 - `src/marginalia/data/socials.js` — contact and social links
 - `src/marginalia/i18n/content.jsx` — French translations and shared EN/FR interface text
-- `public/assets/marginalia/projects/` — seven optimized project images
+- `public/assets/marginalia/projects/` — seven optimized project images; TireTwin-QA uses the numbered fallback
 
 ## Contact
 

@@ -97,4 +97,18 @@ export const WORKS = [
     imageWidth: 1600, imageHeight: 1200, imageFit: "contain",
     href: "https://github.com/H-raf0/portfolio",
   },
+  {
+    id: "tiretwin-qa",
+    numeral: "VIII",
+    title: "TireTwin-QA",
+    role: "Software validation project",
+    year: "2026",
+    blurb: "An automated validation bench for a C++17 indirect tyre-pressure monitoring algorithm, with requirement-based tests, simulated CAN replay, C++/Python comparison, CI, and generated traceability reports.",
+    tags: ["C++17", "GoogleTest", "Python", "CAN", "CI"],
+    thumb: "/assets/marginalia/projects/tiretwin-qa.webp",
+    imageAlt: "TireTwin-QA traceability report showing eight requirements, linked validation tests, and their results.",
+    imageAltFr: "Rapport de traçabilité TireTwin-QA présentant huit exigences, leurs tests de validation et leurs résultats.",
+    imageWidth: 1203, imageHeight: 591, imageFit: "contain",
+    href: "https://github.com/H-raf0/tiretwin-qa",
+  },
 ];

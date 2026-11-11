@@ -48,7 +48,7 @@ const FR_SITE = {
       "Ma quête : créer des logiciels clairs, fiables et agréables à utiliser, tout en progressant en génie logiciel. Et quand un bug résiste à mes incantations, je sors mon artefact le plus puissant : le débogueur.",
     ],
     stats: [
-      { num: String(WORKS.length), label: "Projets présentés", note: "web · jeux · simulation" },
+      { num: String(WORKS.length), label: "Projets présentés", note: "web · jeux · tests logiciels" },
       { num: "2", label: "Projets en équipe", note: "OCULA · API de jeu incrémental" },
       { num: "3", label: "Stacks backend", note: ".NET · Spring Boot · FastAPI" },
       { num: "3", label: "Langues parlées", note: "Français · anglais · arabe" },
@@ -57,7 +57,7 @@ const FR_SITE = {
   work: {
     ...SITE.work, label: "Sélection de projets",
     title: <>Ce que j’ai <em>construit et exploré</em></>,
-    lede: "Une sélection de projets full-stack, backend et d’architecture, réalisés pendant mes études et à titre personnel.",
+    lede: "Une sélection de projets full-stack, backend et de validation logicielle, réalisés pendant mes études et à titre personnel.",
   },
   writing: {
     ...SITE.writing, label: "Expérience",
@@ -97,6 +97,7 @@ const FR_WORKS = {
   "life-game": { title: "Jeu de la vie collaboratif", role: "Projet d’application web", blurb: "Un éditeur multi-utilisateurs pour le Jeu de la vie de Conway : canevas interactif, grille partagée, transactions, import de motifs RLE et commandes de simulation." },
   "unity-platformer": { title: "Prototype de plateforme 2D", role: "Projet de développement de jeu", blurb: "Un prototype Unity avec un contrôleur C# personnalisé, des pièges dynamiques, des points de contrôle persistants, un chargement additif des scènes et des commandes PC et mobile." },
   "rabbit-simulation": { title: "Simulation de population de lapins", role: "Projet de simulation", blurb: "Une simulation de population en C, accompagnée de scripts Python d’analyse et de visualisations de la croissance, de la structure de population et des extinctions." },
+  "tiretwin-qa": { role: "Projet de validation logicielle", blurb: "Un banc de validation automatisé pour un algorithme iTPMS en C++17 : tests dérivés des exigences, rejeu CAN simulé, comparaison C++/Python, intégration continue et rapports de traçabilité générés automatiquement." },
 };
 
 const FR_TAGS = { Algorithms: "Algorithmes", "Game AI": "IA de jeu", Physics: "Physique", "Scene Management": "Gestion des scènes", "Data Visualisation": "Visualisation de données" };
