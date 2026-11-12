@@ -111,4 +111,18 @@ export const WORKS = [
     imageWidth: 1203, imageHeight: 591, imageFit: "contain",
     href: "https://github.com/H-raf0/tiretwin-qa",
   },
+  {
+    id: "atelierflow",
+    numeral: "IX",
+    title: "AtelierFlow",
+    role: "Full-stack personal project",
+    year: "2026",
+    blurb: "A maintenance-management app for production workshops, with equipment tracking, preventive maintenance, reliability KPIs, and a real-time work-order kanban.",
+    tags: ["Angular", "Spring Boot", "PostgreSQL", "WebSocket", "Docker"],
+    thumb: "/assets/marginalia/projects/atelier-flow.webp",
+    imageAlt: "AtelierFlow real-time work-order kanban with columns for open, scheduled, in-progress, and completed work.",
+    imageAltFr: "Kanban des ordres de travail AtelierFlow en temps réel, avec les colonnes ouvert, planifié, en cours et terminé.",
+    imageWidth: 1440, imageHeight: 900, imageFit: "contain",
+    href: "https://github.com/H-raf0/atelierflow",
+  },
 ];

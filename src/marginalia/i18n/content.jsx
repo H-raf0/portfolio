@@ -98,6 +98,7 @@ const FR_WORKS = {
   "unity-platformer": { title: "Prototype de plateforme 2D", role: "Projet de développement de jeu", blurb: "Un prototype Unity avec un contrôleur C# personnalisé, des pièges dynamiques, des points de contrôle persistants, un chargement additif des scènes et des commandes PC et mobile." },
   "rabbit-simulation": { title: "Simulation de population de lapins", role: "Projet de simulation", blurb: "Une simulation de population en C, accompagnée de scripts Python d’analyse et de visualisations de la croissance, de la structure de population et des extinctions." },
   "tiretwin-qa": { role: "Projet de validation logicielle", blurb: "Un banc de validation automatisé pour un algorithme iTPMS en C++17 : tests dérivés des exigences, rejeu CAN simulé, comparaison C++/Python, intégration continue et rapports de traçabilité générés automatiquement." },
+  atelierflow: { role: "Projet full-stack personnel", blurb: "Une application de GMAO pour atelier de production : suivi du parc machines, maintenance préventive, indicateurs de fiabilité et kanban des ordres de travail en temps réel." },
 };
 
 const FR_TAGS = { Algorithms: "Algorithmes", "Game AI": "IA de jeu", Physics: "Physique", "Scene Management": "Gestion des scènes", "Data Visualisation": "Visualisation de données" };
