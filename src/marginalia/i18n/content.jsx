@@ -99,6 +99,7 @@ const FR_WORKS = {
   "rabbit-simulation": { title: "Simulation de population de lapins", role: "Projet de simulation", blurb: "Une simulation de population en C, accompagnée de scripts Python d’analyse et de visualisations de la croissance, de la structure de population et des extinctions." },
   "tiretwin-qa": { role: "Projet de validation logicielle", blurb: "Un banc de validation automatisé pour un algorithme iTPMS en C++17 : tests dérivés des exigences, rejeu CAN simulé, comparaison C++/Python, intégration continue et rapports de traçabilité générés automatiquement." },
   atelierflow: { role: "Projet full-stack personnel", blurb: "Une application de GMAO pour atelier de production : suivi du parc machines, maintenance préventive, indicateurs de fiabilité et kanban des ordres de travail en temps réel." },
+  "agritire-sim": { role: "Projet de simulation numérique", blurb: "Une simulation Python de la traction d’un pneu agricole sur sol meuble (terramécanique de Bekker–Wong) et de son usure sur route (modèle de brosse + loi d’Archard), avec un modèle éléments finis 2D de l’empreinte, des plans d’expériences, un recalage des paramètres de sol et 138 tests de cohérence physique." },
 };
 
 const FR_TAGS = { Algorithms: "Algorithmes", "Game AI": "IA de jeu", Physics: "Physique", "Scene Management": "Gestion des scènes", "Data Visualisation": "Visualisation de données" };

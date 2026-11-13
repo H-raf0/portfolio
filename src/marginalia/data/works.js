@@ -125,4 +125,18 @@ export const WORKS = [
     imageWidth: 1440, imageHeight: 900, imageFit: "contain",
     href: "https://github.com/H-raf0/atelierflow",
   },
+  {
+    id: "agritire-sim",
+    numeral: "X",
+    title: "AgriTireSim",
+    role: "Numerical simulation project",
+    year: "2026",
+    blurb: "A Python simulation of an agricultural tyre's traction on soft soil (Bekker–Wong terramechanics) and road wear (brush model + Archard), with a 2D finite-element footprint model, numerical design of experiments, soil-parameter calibration, and 138 physics-consistency tests.",
+    tags: ["Python", "SciPy", "scikit-fem", "FEM", "DOE"],
+    thumb: "/assets/marginalia/projects/agritire-sim.webp",
+    imageAlt: "AgriTireSim charts of net traction coefficient and tractive efficiency versus slip for four soil types.",
+    imageAltFr: "Graphiques AgriTireSim du coefficient de traction nette et du rendement de traction en fonction du glissement pour quatre sols.",
+    imageWidth: 1384, imageHeight: 611, imageFit: "contain",
+    href: "https://github.com/H-raf0/agritire-sim",
+  },
 ];
